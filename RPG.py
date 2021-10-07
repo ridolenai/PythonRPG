@@ -67,9 +67,9 @@ wargames = input ('How about a nice game of chess? 1)Yes 2)No ')
 
 if wargames == 1:
     print('Okay, here we go. I must warn you that you will probably lose.')
-if wargames == 2: 
+elif wargames == 2: 
     print ('I suppose we can play later.  That is probably in your best interest.')
-if wargames != 1 or 2:
+elif wargames != 1 or 2:
     print ("Seriously?! You can't even follow simple instructions? It was literally a binary choice. Well, restart it.  You don't have long.")
     time.sleep(2)
     you_simple_fool()
