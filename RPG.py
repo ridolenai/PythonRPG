@@ -8,7 +8,20 @@ attack_modifier_baddie = ''
 you_lose_good_day = (1)
 
 
+def wargames_2_chicken ():
+    print ('I suppose I would refrain from playing as well if I were scared of my own shadow.')
+    wargames_2 = int(input ('Would you like a chance to prove yourself?  I will give you another chance if you wish... 1)Of course I will. My momma raised me right. 2) No, I believe I chose correctly.'))
+    if wargames_2 == 1:
+        print ("That's what we like to see!")
+    elif wargames_2 == 2:
+        print ("Okay, go cry to mommy.  I'm sure she has ice cream for you.")
+    elif wargames_2 != 1 or 2:
+        print ("It was a yes or no question.  How did you not get that right?")
+        time.sleep(2)
+        you_simple_fool()
+
 def you_simple_fool():
+    print ('You should restart the console while you have time.')
     you_lose_good_day = (1)
     time.sleep(1)
     print ('10 seconds')
@@ -17,7 +30,7 @@ def you_simple_fool():
     time.sleep(1)
     print ('8')
     time.sleep(1)
-    print ('7 Seriously, you should terminate your terminal and start over.')
+    print ('7 Seriously, you should terminate your console and start over.')
     time.sleep(1)
     print ('6')
     time.sleep(1)
@@ -34,7 +47,7 @@ def you_simple_fool():
     print ("You were warned.") 
     time.sleep(2)
 
-    while you_lose_good_day != 100:
+    while you_lose_good_day < 314:
         print ('YYYYYYY       YYYYYYY                                                        iiii                                              lllllll                             ffffffffffffffff                                 lllllll  !!! ')
         print('Y:::::Y       Y:::::Y                                                       i::::i                                             l:::::l                            f::::::::::::::::f                                l:::::l !!:!!')
         print('Y:::::Y       Y:::::Y                                                        iiii                                              l:::::l                           f::::::::::::::::::f                               l:::::l !:::!')
@@ -58,19 +71,26 @@ def you_simple_fool():
         print('                                                                                                         p:::::::p                                                                                                          ')   
         print('                                                                                                         ppppppppp      ')
         you_lose_good_day += 1
-        time.sleep (0.05)
+        time.sleep (0.01)
 
-print ("Greetings. Or should I say, to whom it may concern?")
-print ('Strange game.')
-print ('The only winning move is not to play.')
-wargames = input ('How about a nice game of chess? 1)Yes 2)No ')
-
-if wargames == 1:
-    print('Okay, here we go. I must warn you that you will probably lose.')
-elif wargames == 2: 
-    print ('I suppose we can play later.  That is probably in your best interest.')
-elif wargames != 1 or 2:
-    print ("Seriously?! You can't even follow simple instructions? It was literally a binary choice. Well, restart it.  You don't have long.")
+def introduction (x):
+    print ("Greetings. Or should I say, to whom it may concern?")
     time.sleep(2)
-    you_simple_fool()
+    print ('Strange game.')
+    time.sleep(2)
+    print ('The only winning move is not to play.')
+    time.sleep(2)
+    wargames = int(input ('How about a nice game of chess? 1)Yes 2)No '))
 
+    if wargames == 1:
+        print('Okay, here we go. I must warn you that you will probably lose.')
+    elif wargames == 2: 
+        print ('I suppose we can play later.  That is probably in your best interest.')
+        wargames_2_chicken()
+    elif wargames != 1 or 2:
+        print ("Seriously?! You can't even follow simple instructions? It was a binary choice. Well, restart it.  You don't have long.")
+        time.sleep(2)
+        you_simple_fool()
+
+
+introduction
